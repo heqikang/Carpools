@@ -53,8 +53,8 @@
 }
 
 - (IBAction)passengerCellBtnAction:(UIButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(didClickPassengerCellButton:)]) {
-        [self.delegate didClickPassengerCellButton:sender];
+    if ([self.cancelDelegate respondsToSelector:@selector(didClickPassengerCellButton:)]) {
+        [self.cancelDelegate didClickPassengerCellButton:sender];
     }
 }
 

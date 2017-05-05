@@ -84,7 +84,7 @@
     manger.responseSerializer = [AFHTTPResponseSerializer serializer];
     
     //请求超时
-    manger.requestSerializer.timeoutInterval = 30;
+    manger.requestSerializer.timeoutInterval = 10;
     
     switch (type) {
             //GET请求

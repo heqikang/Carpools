@@ -39,7 +39,7 @@
 
 @property (nonatomic, copy) TripModel *model;
 
-@property (nonatomic, weak) id<PassengerCellDelegate>delegate;
+@property (nonatomic, weak) id<PassengerCellDelegate>cancelDelegate;
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
 

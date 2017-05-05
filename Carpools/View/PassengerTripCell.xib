@@ -182,9 +182,9 @@
                                                             <constraint firstAttribute="width" constant="24" id="C8o-cF-lJw"/>
                                                             <constraint firstAttribute="height" constant="24" id="LZm-5f-7BO"/>
                                                         </constraints>
-                                                        <state key="normal" image="cancel.png"/>
+                                                        <state key="normal" image="chat.png"/>
                                                         <connections>
-                                                            <action selector="passengerTripCellBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Zvf-Sr-E0t"/>
+                                                            <action selector="passengerTripCellBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XYg-Ve-Hpi"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -224,7 +224,7 @@
                                                             <constraint firstAttribute="width" constant="24" id="OBq-Od-cAK"/>
                                                             <constraint firstAttribute="height" constant="24" id="olq-Hx-fBI"/>
                                                         </constraints>
-                                                        <state key="normal" image="finish.png"/>
+                                                        <state key="normal" image="cancel.png"/>
                                                         <connections>
                                                             <action selector="passengerTripCellBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8dt-1y-WMU"/>
                                                         </connections>
@@ -289,15 +289,15 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="cancelBtn" destination="QJw-jD-CG6" id="vsi-ig-5Qf"/>
+                <outlet property="cancelBtn" destination="1mz-5Z-rMd" id="Qwc-mD-qES"/>
                 <outlet property="carownerCarNumberLabel" destination="e2n-S8-1EW" id="SMc-fm-KDg"/>
                 <outlet property="carownerDepartmentLabel" destination="dSJ-Lc-FIS" id="Zad-JE-vUr"/>
                 <outlet property="carownerNameLabel" destination="kJN-4X-eiq" id="60V-Lk-fwB"/>
+                <outlet property="chatBtn" destination="QJw-jD-CG6" id="FRf-g7-nKW"/>
                 <outlet property="dateLabel" destination="bmJ-QM-0M3" id="sir-JH-T49"/>
                 <outlet property="editEndPlaceBtn" destination="OHt-c4-B2h" id="FIq-jp-mQj"/>
                 <outlet property="editStartPlaceBtn" destination="yEK-hi-Ol0" id="xyl-Pe-698"/>
                 <outlet property="endPlaceBtn" destination="f9W-MD-ZWu" id="dET-eY-SEA"/>
-                <outlet property="finishBtn" destination="1mz-5Z-rMd" id="sC9-xO-u9S"/>
                 <outlet property="foregroundView" destination="QEF-FG-cpb" id="ISf-gt-4Ui"/>
                 <outlet property="phoneBtn" destination="bf9-Vi-Wzi" id="Nit-Ju-0be"/>
                 <outlet property="startPlaceBtn" destination="x8P-qJ-GS2" id="3lK-RR-swk"/>
@@ -308,9 +308,9 @@
     </objects>
     <resources>
         <image name="cancel.png" width="58" height="58"/>
+        <image name="chat.png" width="60" height="57"/>
         <image name="dots" width="14" height="84"/>
         <image name="edit.png" width="64" height="53"/>
-        <image name="finish.png" width="58" height="58"/>
         <image name="phone.png" width="64" height="64"/>
     </resources>
 </document>

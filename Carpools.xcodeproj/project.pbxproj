@@ -174,6 +174,16 @@
 		8629B04A1EB9B81600B1FB79 /* setting_factory.png in Resources */ = {isa = PBXBuildFile; fileRef = 8629B0451EB9B81600B1FB79 /* setting_factory.png */; };
 		8629B04B1EB9B81600B1FB79 /* setting_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 8629B0461EB9B81600B1FB79 /* setting_home.png */; };
 		8629B04C1EB9B81600B1FB79 /* setting_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 8629B0471EB9B81600B1FB79 /* setting_phone.png */; };
+		867ED9081EBC6C49007AD369 /* TakeCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 867ED9071EBC6C49007AD369 /* TakeCarViewController.m */; };
+		867ED90B1EBC6CB0007AD369 /* TakeCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 867ED90A1EBC6CB0007AD369 /* TakeCarModel.m */; };
+		867ED90F1EBC6CD0007AD369 /* TakeCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 867ED90D1EBC6CD0007AD369 /* TakeCarCell.m */; };
+		867ED9101EBC6CD0007AD369 /* TakeCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 867ED90E1EBC6CD0007AD369 /* TakeCarCell.xib */; };
+		867ED9181EBC78E6007AD369 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 867ED9121EBC78E6007AD369 /* square.png */; };
+		867ED9191EBC78E6007AD369 /* square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867ED9131EBC78E6007AD369 /* square@2x.png */; };
+		867ED91A1EBC78E6007AD369 /* square@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867ED9141EBC78E6007AD369 /* square@3x.png */; };
+		867ED91B1EBC78E6007AD369 /* squareSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 867ED9151EBC78E6007AD369 /* squareSelected.png */; };
+		867ED91C1EBC78E6007AD369 /* squareSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867ED9161EBC78E6007AD369 /* squareSelected@2x.png */; };
+		867ED91D1EBC78E6007AD369 /* squareSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867ED9171EBC78E6007AD369 /* squareSelected@3x.png */; };
 		86A62F941EB9882C00889D35 /* QKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A62F931EB9882C00889D35 /* QKAnnotationView.m */; };
 		E81D6C98F161CA867BC62B1F /* Pods_Carpools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DA2D1A98B708477F7FD6E7 /* Pods_Carpools.framework */; };
 /* End PBXBuildFile section */
@@ -392,6 +402,19 @@
 		8629B0451EB9B81600B1FB79 /* setting_factory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_factory.png; sourceTree = "<group>"; };
 		8629B0461EB9B81600B1FB79 /* setting_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_home.png; sourceTree = "<group>"; };
 		8629B0471EB9B81600B1FB79 /* setting_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting_phone.png; sourceTree = "<group>"; };
+		867ED9061EBC6C49007AD369 /* TakeCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeCarViewController.h; sourceTree = "<group>"; };
+		867ED9071EBC6C49007AD369 /* TakeCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakeCarViewController.m; sourceTree = "<group>"; };
+		867ED9091EBC6CB0007AD369 /* TakeCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeCarModel.h; sourceTree = "<group>"; };
+		867ED90A1EBC6CB0007AD369 /* TakeCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakeCarModel.m; sourceTree = "<group>"; };
+		867ED90C1EBC6CD0007AD369 /* TakeCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeCarCell.h; sourceTree = "<group>"; };
+		867ED90D1EBC6CD0007AD369 /* TakeCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakeCarCell.m; sourceTree = "<group>"; };
+		867ED90E1EBC6CD0007AD369 /* TakeCarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TakeCarCell.xib; sourceTree = "<group>"; };
+		867ED9121EBC78E6007AD369 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
+		867ED9131EBC78E6007AD369 /* square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square@2x.png"; sourceTree = "<group>"; };
+		867ED9141EBC78E6007AD369 /* square@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square@3x.png"; sourceTree = "<group>"; };
+		867ED9151EBC78E6007AD369 /* squareSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squareSelected.png; sourceTree = "<group>"; };
+		867ED9161EBC78E6007AD369 /* squareSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareSelected@2x.png"; sourceTree = "<group>"; };
+		867ED9171EBC78E6007AD369 /* squareSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareSelected@3x.png"; sourceTree = "<group>"; };
 		86A62F921EB9882C00889D35 /* QKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKAnnotationView.h; sourceTree = "<group>"; };
 		86A62F931EB9882C00889D35 /* QKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKAnnotationView.m; sourceTree = "<group>"; };
 		FB432BEBFEBF1A1DAF3FBF7F /* Pods-Carpools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carpools.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carpools/Pods-Carpools.release.xcconfig"; sourceTree = "<group>"; };
@@ -534,6 +557,8 @@
 		86111C741EB1CEC300E3F9EE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				867ED9091EBC6CB0007AD369 /* TakeCarModel.h */,
+				867ED90A1EBC6CB0007AD369 /* TakeCarModel.m */,
 				86111C751EB1CEC300E3F9EE /* BusAnnotation.h */,
 				86111C761EB1CEC300E3F9EE /* BusAnnotation.m */,
 				86111C771EB1CEC300E3F9EE /* LovewallModel.h */,
@@ -553,6 +578,7 @@
 				86286E0C1EB8802800ED214A /* bus2.png */,
 				8601E5E51EB85C3B00ADD4EF /* passenger.png */,
 				86111C821EB1CED200E3F9EE /* background.png */,
+				867ED9111EBC78E6007AD369 /* TakeCarViewController */,
 				8629B0421EB9B81600B1FB79 /* SettingViewController */,
 				8629B01B1EB9B7E000B1FB79 /* MeViewController */,
 				86111C841EB1CED200E3F9EE /* BusViewController */,
@@ -723,6 +749,8 @@
 				86111D531EB1CEE800E3F9EE /* TripViewController.h */,
 				86111D541EB1CEE800E3F9EE /* TripViewController.m */,
 				86111D551EB1CEE800E3F9EE /* TripViewController.xib */,
+				867ED9061EBC6C49007AD369 /* TakeCarViewController.h */,
+				867ED9071EBC6C49007AD369 /* TakeCarViewController.m */,
 			);
 			path = DiscoverViewController;
 			sourceTree = "<group>";
@@ -761,6 +789,9 @@
 		86111D711EB1CEF800E3F9EE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				867ED90C1EBC6CD0007AD369 /* TakeCarCell.h */,
+				867ED90D1EBC6CD0007AD369 /* TakeCarCell.m */,
+				867ED90E1EBC6CD0007AD369 /* TakeCarCell.xib */,
 				8629B00B1EB9B35100B1FB79 /* LineSettingCell.h */,
 				8629B00C1EB9B35100B1FB79 /* LineSettingCell.m */,
 				8629B00D1EB9B35100B1FB79 /* LineSettingCell.xib */,
@@ -867,6 +898,19 @@
 			path = SettingViewController;
 			sourceTree = "<group>";
 		};
+		867ED9111EBC78E6007AD369 /* TakeCarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				867ED9121EBC78E6007AD369 /* square.png */,
+				867ED9131EBC78E6007AD369 /* square@2x.png */,
+				867ED9141EBC78E6007AD369 /* square@3x.png */,
+				867ED9151EBC78E6007AD369 /* squareSelected.png */,
+				867ED9161EBC78E6007AD369 /* squareSelected@2x.png */,
+				867ED9171EBC78E6007AD369 /* squareSelected@3x.png */,
+			);
+			path = TakeCarViewController;
+			sourceTree = "<group>";
+		};
 		FF308D5271685B6BBB51B987 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -962,6 +1006,7 @@
 				8629B03F1EB9B7E000B1FB79 /* setting@2x.png in Resources */,
 				86111D351EB1CED300E3F9EE /* discover_normal@3x.png in Resources */,
 				86111D1D1EB1CED200E3F9EE /* finish@3x.png in Resources */,
+				867ED91A1EBC78E6007AD369 /* square@3x.png in Resources */,
 				8629B0391EB9B7E000B1FB79 /* positive@2x.png in Resources */,
 				8629B0381EB9B7E000B1FB79 /* positive.png in Resources */,
 				86111D231EB1CED200E3F9EE /* userName@3x.png in Resources */,
@@ -977,6 +1022,7 @@
 				8629B0311EB9B7E000B1FB79 /* help@3x.png in Resources */,
 				86111D371EB1CED300E3F9EE /* discover_selected@2x.png in Resources */,
 				86111D311EB1CED300E3F9EE /* chat_selected@2x.png in Resources */,
+				867ED91C1EBC78E6007AD369 /* squareSelected@2x.png in Resources */,
 				8629B04C1EB9B81600B1FB79 /* setting_phone.png in Resources */,
 				8629B03D1EB9B7E000B1FB79 /* QR@3x.png in Resources */,
 				86286E0D1EB8802800ED214A /* bus2.png in Resources */,
@@ -984,6 +1030,7 @@
 				86111D091EB1CED200E3F9EE /* journey.png in Resources */,
 				86111CFC1EB1CED200E3F9EE /* time@3x.png in Resources */,
 				86111D2B1EB1CED300E3F9EE /* bus_selected@2x.png in Resources */,
+				867ED91D1EBC78E6007AD369 /* squareSelected@3x.png in Resources */,
 				86111D1F1EB1CED200E3F9EE /* phone@2x.png in Resources */,
 				86111D131EB1CED200E3F9EE /* cancel@2x.png in Resources */,
 				86111CF91EB1CED200E3F9EE /* location@3x.png in Resources */,
@@ -997,6 +1044,7 @@
 				8629B0401EB9B7E000B1FB79 /* setting@3x.png in Resources */,
 				86111D191EB1CED200E3F9EE /* edit@2x.png in Resources */,
 				86111D381EB1CED300E3F9EE /* discover_selected@3x.png in Resources */,
+				867ED9191EBC78E6007AD369 /* square@2x.png in Resources */,
 				8629B04A1EB9B81600B1FB79 /* setting_factory.png in Resources */,
 				8629B0481EB9B81600B1FB79 /* setting_car.png in Resources */,
 				86111D2C1EB1CED300E3F9EE /* bus_selected@3x.png in Resources */,
@@ -1040,12 +1088,14 @@
 				86111D651EB1CEE800E3F9EE /* ChatViewController.xib in Resources */,
 				86111CE31EB1CED200E3F9EE /* background.png in Resources */,
 				86111CF71EB1CED200E3F9EE /* location.png in Resources */,
+				867ED9101EBC6CD0007AD369 /* TakeCarCell.xib in Resources */,
 				86111D981EB1CEF800E3F9EE /* DriverTripCell.xib in Resources */,
 				86111D041EB1CED200E3F9EE /* add@2x.png in Resources */,
 				86111D331EB1CED300E3F9EE /* discover_normal.png in Resources */,
 				86111D0E1EB1CED200E3F9EE /* love@3x.png in Resources */,
 				86111DA01EB1CEF800E3F9EE /* PassengerCell.xib in Resources */,
 				8629B0411EB9B7E000B1FB79 /* user.jpg in Resources */,
+				867ED91B1EBC78E6007AD369 /* squareSelected.png in Resources */,
 				86111D341EB1CED300E3F9EE /* discover_normal@2x.png in Resources */,
 				86111D0A1EB1CED200E3F9EE /* journey@2x.png in Resources */,
 				86111D151EB1CED200E3F9EE /* chat.png in Resources */,
@@ -1067,6 +1117,7 @@
 				86111CFA1EB1CED200E3F9EE /* time.png in Resources */,
 				86111D0C1EB1CED200E3F9EE /* love.png in Resources */,
 				86111D121EB1CED200E3F9EE /* cancel.png in Resources */,
+				867ED9181EBC78E6007AD369 /* square.png in Resources */,
 				86111D3E1EB1CED300E3F9EE /* user_selected@3x.png in Resources */,
 				86111D071EB1CED200E3F9EE /* car@2x.png in Resources */,
 				86111D081EB1CED200E3F9EE /* car@3x.png in Resources */,
@@ -1147,6 +1198,7 @@
 				86111D941EB1CEF800E3F9EE /* CustomPinAnnotationView.m in Sources */,
 				86111C711EB1CEA800E3F9EE /* PopMenuView.m in Sources */,
 				86111D6E1EB1CEE800E3F9EE /* MeViewController.m in Sources */,
+				867ED9081EBC6C49007AD369 /* TakeCarViewController.m in Sources */,
 				86111D691EB1CEE800E3F9EE /* LovewallViewController.m in Sources */,
 				86111D9F1EB1CEF800E3F9EE /* PassengerCell.m in Sources */,
 				86111C7E1EB1CEC300E3F9EE /* LovewallModel.m in Sources */,
@@ -1161,6 +1213,7 @@
 				86111C6E1EB1CEA800E3F9EE /* GroupShadowTableView.m in Sources */,
 				86111D931EB1CEF800E3F9EE /* CustomAnnotationView.m in Sources */,
 				86111D971EB1CEF800E3F9EE /* DriverTripCell.m in Sources */,
+				867ED90F1EBC6CD0007AD369 /* TakeCarCell.m in Sources */,
 				86111D911EB1CEF800E3F9EE /* AnnotationView.m in Sources */,
 				8629AFFF1EB9AD6600B1FB79 /* WebPage.m in Sources */,
 				8629AFFC1EB9A67100B1FB79 /* MBProgressHUD.m in Sources */,
@@ -1170,6 +1223,7 @@
 				86111D991EB1CEF800E3F9EE /* LineNormalCell.m in Sources */,
 				86111D621EB1CEE800E3F9EE /* BusViewController.m in Sources */,
 				86111D9B1EB1CEF800E3F9EE /* LovewallCell.m in Sources */,
+				867ED90B1EBC6CB0007AD369 /* TakeCarModel.m in Sources */,
 				86111D6C1EB1CEE800E3F9EE /* LoginView.m in Sources */,
 				86111D661EB1CEE800E3F9EE /* ScheduleViewController.m in Sources */,
 			);

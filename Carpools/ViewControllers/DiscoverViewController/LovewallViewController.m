@@ -48,7 +48,7 @@ static int count;
 {
     //    http://getazlnx001.chinacloudapp.cn:8080/lovewall?method=open_lovewallbycompanyid&company_id=1
     self.loadingHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    self.loadingHud.label.text = @"努力加载中...";
+    self.loadingHud.label.text = @"玩命加载中...";
     self.loadingHud.mode = MBProgressHUDModeIndeterminate;
     
     [HttpRequest requestWithURLString:GM_ESQ_LOVEWALL parameters:nil type:HttpRequestTypeGet success:^(id responseObject) {
@@ -78,9 +78,9 @@ static int count;
     } failure:^(NSError *error) {
         [self.loadingHud hideAnimated:YES];
         dispatch_async(dispatch_get_main_queue(), ^{
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"网络异常, 请重试" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"网络不给力, 请重试" preferredStyle:UIAlertControllerStyleAlert];
             [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
-            [alert addAction:[UIAlertAction actionWithTitle:@"重试" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [alert addAction:[UIAlertAction actionWithTitle:@"重试" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [self getLovewallInfo];
             }]];
             [self presentViewController:alert animated:YES completion:nil];

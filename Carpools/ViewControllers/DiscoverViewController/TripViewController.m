@@ -66,7 +66,7 @@
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"您还没登陆,请先登陆" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
-        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [alert addAction:[UIAlertAction actionWithTitle:@"登陆" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             self.appDelegate.loginView.hidden = NO;
             [self.appDelegate.window.rootViewController.view bringSubviewToFront:self.appDelegate.loginView];
         }]];
@@ -80,7 +80,7 @@
     // http://getazlnx001.chinacloudapp.cn:8080/info?method=my_carpool_trip&user_id=72200
     self.loadingHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.loadingHud.mode = MBProgressHUDModeIndeterminate;
-    self.loadingHud.label.text = @"努力加载中...";
+    self.loadingHud.label.text = @"玩命加载中...";
     NSString *url = [ESQ_INFO stringByAppendingString:[NSString stringWithFormat:@"method=my_carpool_trip&user_id=%@", LOGINDATA[@"uid"]]];
     [HttpRequest requestGetWithURLString:url parameters:nil success:^(id responseObject) {
         if (responseObject) {
@@ -111,9 +111,9 @@
     } failure:^(NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.loadingHud hideAnimated:YES];
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"网络异常,请重试" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"网络不给力,请重试" preferredStyle:UIAlertControllerStyleAlert];
             [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
-            [alert addAction:[UIAlertAction actionWithTitle:@"重试" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [alert addAction:[UIAlertAction actionWithTitle:@"重试" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [self getMyTripInfo];
             }]];
             [self presentViewController:alert animated:YES completion:nil];
@@ -184,8 +184,9 @@
             if ([model.status isEqualToString:@"0"]) {
                 pCell.model = model;
                 self.passengerCellIndexPathSection = indexPath.section;
-                pCell.cancelBtn.tag = 1 + indexPath.section;
-                pCell.delegate = self;
+                pCell.cancelBtn.tag = 1000 + indexPath.section;
+                NSLog(@"pCell.cancelBtn的tag:%ld", pCell.cancelBtn.tag);
+                pCell.cancelDelegate = self;
                 [pCell.cancelBtn addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
                 return pCell;
             }else
@@ -193,7 +194,9 @@
                 if ([LOGINDATA[@"name"] isEqualToString:model.passenger_name]) {
                     passengerCell.model = model;
                     self.passengerTripCellIndexPathSection = indexPath.section;
-                    passengerCell.cancelBtn.tag = 200 + indexPath.section;
+                    passengerCell.chatBtn.tag = 10 + indexPath.section;
+                    passengerCell.phoneBtn.tag = 11 + indexPath.section;
+                    passengerCell.cancelBtn.tag = 12 + indexPath.section;
                     passengerCell.delegate = self;
                     return passengerCell;
                 }
@@ -227,11 +230,40 @@
     NSLog(@"%ld", button.tag);
 }
 
+#pragma mark -- 乘客对司机的操作
 - (void)didClickPassengerTripCellButton:(UIButton *)button
 {
+    TripModel *model = self.dataArray[self.passengerTripCellIndexPathSection];
+    NSInteger tag = button.tag - self.passengerTripCellIndexPathSection;
+    if (tag == 10) {
+        
+    }else if (tag == 11){
+        NSMutableString *str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@", model.driver_phone];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+    }else if (tag == 12){
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"真的要取消搭乘吗" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:nil]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            // http://getazlnx001.chinacloudapp.cn:8080/info?infoid=12533&method=cancelbooking&status=2
+            NSString *url = [ESQ_INFO stringByAppendingString:[NSString stringWithFormat:@"infoid=%@&method=cancelbooking&status=2", model.infoid]];
+            [HttpRequest requestWithURLString:url parameters:nil type:HttpRequestTypeGet success:^(id responseObject) {
+                if (responseObject) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.dataArray removeObject:model];
+                        [self.tableView reloadData];
+                    });
+                }
+            } failure:^(NSError *error) {
+                
+            }];
+            
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
     NSLog(@"%ld", button.tag);
 }
 
+#pragma mark -- 司机对乘客的操作
 - (void)didClickDriverTripCellBtn:(UIButton *)button
 {
     TripModel *model = self.dataArray[self.driverTripIndexPathSection];
@@ -239,10 +271,53 @@
     if (tag == 10) {
         NSLog(@"点击了聊天图标");
     }else if (tag == 11){
+        NSMutableString *str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@", model.passenger_phone];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
         NSLog(@"点击了打电话图标");
     }else if (tag == 12){
+        
+        // http://getazlnx001.chinacloudapp.cn:8080/lovewall?method=cancel_trip_by_driver&user_id=36870&info_id=12635
+        NSString *url = [ESQ_LOVEWALL stringByAppendingString:[NSString stringWithFormat:@"user_id=%@&info_id=%@&method=cancel_trip_by_driver", LOGINDATA[@"uid"], model.infoid]];
+        
+        NSString *string = [NSString stringWithFormat:@"您确信取消 %@ 到 %@ 的行程吗?",  model.passenger_name, model.to_address_name];
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"通知" message:string preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:nil]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [HttpRequest requestWithURLString:url parameters:nil type:HttpRequestTypeGet success:^(id responseObject) {
+                if (responseObject) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.dataArray removeObject:model];
+                        [self.tableView reloadData];
+                    });
+                }
+            } failure:^(NSError *error) {
+                
+            }];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+        
         NSLog(@"点击了取消图标");
     }else if (tag == 13){
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"真的完成搭乘吗" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:nil]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            // http://getazlnx001.chinacloudapp.cn:8080/info?method=passagefinishbooking&infoid=13004
+            NSString *url = [ESQ_INFO stringByAppendingString:[NSString stringWithFormat:@"method=passagefinishbooking&infoid=%@", model.infoid]];
+            [HttpRequest requestWithURLString:url parameters:nil type:HttpRequestTypeGet success:^(id responseObject) {
+                if (responseObject) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.dataArray removeObject:model];
+                        [self.tableView reloadData];
+                    });
+                }
+            } failure:^(NSError *error) {
+                
+            }];
+        }]];
+        
+        [self presentViewController:alert animated:YES completion:nil];
         NSLog(@"点击了完成图标");
     }
 }

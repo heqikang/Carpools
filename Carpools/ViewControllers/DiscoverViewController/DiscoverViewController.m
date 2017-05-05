@@ -12,6 +12,7 @@
 #import "PopMenuView.h"
 #import "LovewallViewController.h"
 #import "TripViewController.h"
+#import "TakeCarViewController.h"
 
 @interface DiscoverViewController ()<UITableViewDelegate, UITableViewDataSource, PopMenuViewDelegate>
 
@@ -22,7 +23,6 @@
 @property (nonatomic, strong) UIButton *coverBtn;
 
 @property (nonatomic, strong) UIButton *rightBarBtn;
-
 
 @end
 
@@ -49,7 +49,6 @@ static int count = 3;
     self.tableView.backgroundColor = [UIColor whiteColor];
     
     [self createRightBarItemButton];
-//    [self loadPopMenuView];
 
 }
 
@@ -214,7 +213,8 @@ static int count = 3;
         [self.navigationController pushViewController:tripViewController animated:YES];
         
     }else if (indexPath.section == 1){
-        
+        TakeCarViewController *takeCarViewController = [[TakeCarViewController alloc] init];
+        [self.navigationController pushViewController:takeCarViewController animated:YES];
     }else if(indexPath.section == 2)
     {
         LovewallViewController *lovewall = [[LovewallViewController alloc] init];

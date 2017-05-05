@@ -98,7 +98,7 @@
     if (LOGINDATA == nil) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"您还没登陆,请先登陆" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
-        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [alert addAction:[UIAlertAction actionWithTitle:@"登陆" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             self.appDelegate.loginView.hidden = NO;
             [self.appDelegate.window.rootViewController.view bringSubviewToFront:self.appDelegate.loginView];
         }]];

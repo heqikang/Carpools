@@ -42,9 +42,9 @@
 
 @property (nonatomic, weak) id<PassengerTripCellDelegate>delegate;
 
-@property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
+@property (weak, nonatomic) IBOutlet UIButton *chatBtn;
 @property (weak, nonatomic) IBOutlet UIButton *phoneBtn;
-@property (weak, nonatomic) IBOutlet UIButton *finishBtn;
+@property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
 
 
 @end
