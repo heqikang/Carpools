@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kGe-t2-tMa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bus View Controller-->
+        <scene sceneID="wdp-jv-uQ5">
+            <objects>
+                <viewController id="UoT-kD-eOI" customClass="BusViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Syp-kW-Q9u"/>
+                        <viewControllerLayoutGuide type="bottom" id="JqG-OE-Hzw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dpt-zv-TXo">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eUs-js-53m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1p-Zk-FhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="322.48875562218893"/>
+        </scene>
+        <!--Discover View Controller-->
+        <scene sceneID="pA0-c8-3Vu">
+            <objects>
+                <viewController id="XVk-tM-Xxq" customClass="DiscoverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="USw-xF-f9m"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hu8-95-BhP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3d0-pR-BgG">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Ot-GW-i2l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfv-tJ-CXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359.2" y="1011.544227886057"/>
+        </scene>
+        <!--Me View Controller-->
+        <scene sceneID="acj-Bp-HXt">
+            <objects>
+                <viewController id="ACG-QN-K0L" customClass="MeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kuy-K0-5l8"/>
+                        <viewControllerLayoutGuide type="bottom" id="lrK-Fx-AEF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="njq-9C-FX8">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="blp-eo-vZF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mZ-R1-tzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1341.5999999999999" y="1747.3763118440781"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="JDz-Cb-O20">
+            <objects>
+                <viewController id="Ri3-XQ-DiE" customClass="ChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RX3-jT-xI8"/>
+                        <viewControllerLayoutGuide type="bottom" id="QXx-Md-lGw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qSB-su-vWu">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BaU-tn-WJ9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X8p-aI-e6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="-331.48425787106447"/>
+        </scene>
+        <!--Root Tab Bar Viewcontroller-->
+        <scene sceneID="PZh-pU-uxP">
+            <objects>
+                <tabBarController id="kGe-t2-tMa" customClass="RootTabBarViewcontroller" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Gzt-Mv-U80">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.34901960784313724" green="0.28235294117647058" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ox3-LC-SLD" kind="relationship" relationship="viewControllers" id="yJx-SY-EtV"/>
+                        <segue destination="qfm-nr-J6G" kind="relationship" relationship="viewControllers" id="gPK-tn-q5v"/>
+                        <segue destination="IT9-34-o55" kind="relationship" relationship="viewControllers" id="4aX-op-FDS"/>
+                        <segue destination="TTj-P4-B1u" kind="relationship" relationship="viewControllers" id="Ha4-7B-SRm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icd-Gi-UEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-518" y="-4"/>
+        </scene>
+        <!--溢信-->
+        <scene sceneID="lqJ-FK-TvM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ox3-LC-SLD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="溢信" image="chat_normal.png" selectedImage="chat_selected.png" id="e93-RG-oev"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="cE9-n6-ntx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.34901960780000002" green="0.28235294119999998" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ri3-XQ-DiE" kind="relationship" relationship="rootViewController" id="nUW-UK-Jyw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBx-8B-sDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432.80000000000001" y="-331.48425787106447"/>
+        </scene>
+        <!--班车-->
+        <scene sceneID="Vq9-a7-A00">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qfm-nr-J6G" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="班车" image="bus_normal.png" selectedImage="bus_selected.png" id="THK-Ka-DLi"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="2eS-kK-KCf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.34901960780000002" green="0.28235294119999998" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UoT-kD-eOI" kind="relationship" relationship="rootViewController" id="AdB-T9-PcR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lW8-Ch-9ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432.80000000000001" y="322.48875562218893"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="RkE-zP-4CC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IT9-34-o55" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="发现" image="discover_normal.png" selectedImage="discover_selected.png" id="KG4-aT-UEx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Vkx-df-VT8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.34901960780000002" green="0.28235294119999998" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XVk-tM-Xxq" kind="relationship" relationship="rootViewController" id="3on-jA-h2S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84z-2c-Y6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="1011.544227886057"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="vh5-En-iI7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TTj-P4-B1u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="user_normal.png" selectedImage="user_selected.png" id="hlb-4Z-JLo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="JsD-6C-dSn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.34901960780000002" green="0.28235294119999998" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ACG-QN-K0L" kind="relationship" relationship="rootViewController" id="wci-To-xjN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIv-nZ-ao3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402.39999999999998" y="1747.3763118440781"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bus_normal.png" width="24" height="17"/>
+        <image name="bus_selected.png" width="30" height="21"/>
+        <image name="chat_normal.png" width="22" height="22"/>
+        <image name="chat_selected.png" width="28" height="27"/>
+        <image name="discover_normal.png" width="20" height="20"/>
+        <image name="discover_selected.png" width="26" height="26"/>
+        <image name="user_normal.png" width="19" height="20"/>
+        <image name="user_selected.png" width="23" height="25"/>
+    </resources>
+</document>

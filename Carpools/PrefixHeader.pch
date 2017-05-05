@@ -1,0 +1,48 @@
+//
+//  PrefixHeader.pch
+//  Carpools
+//
+//  Created by ZhengBob on 24/4/2017.
+//  Copyright © 2017 Esquel. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define kScreenBounds ([UIScreen mainScreen].bounds)
+
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+
+
+// 获取单例
+#define LOGINDATA ([[[NSUserDefaults standardUserDefaults]objectForKey:@"loginData"] isKindOfClass:[NSDictionary class]] ? [[NSUserDefaults standardUserDefaults]dictionaryForKey:@"loginData"] : nil)
+
+// userdefault
+#define USERDEFAULTS ([NSUserDefaults standardUserDefaults])
+
+
+
+#define DOMAIN @"http://getazlnx001.chinacloudapp.cn:8080"
+#define XMPP_url @"getazlnx001.chinacloudapp.cn"
+
+#define GM_ESQ_LOVEWALL (@"http://getazlnx001.chinacloudapp.cn:8080/lovewall?method=open_lovewallbycompanyid&company_id=1")
+#define ESQ_INFO (@"http://getazlnx001.chinacloudapp.cn:8080/info?")
+#define ESQ_USERS (@"http://getazlnx001.chinacloudapp.cn:8080/users?")
+#define ESQ_ROADLINE (@"http://getazlnx001.chinacloudapp.cn:8080/roadline?")
+
+#define ESQ_LOVEWALL (@"http://getazlnx001.chinacloudapp.cn:8080/lovewall?")
+
+#define ESQ_BUSLASTPOSITION (@"http://getazlnx001.chinacloudapp.cn:8080/lastposition?method=point")
+#define GM_ESQ_BUSLASTPOSITION (@"http://getazlnx001.chinacloudapp.cn:8080/lastposition?method=bus_realtime_position_by_companyid&company_id=1")
+
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+
+#import "HttpRequest.h"
+#import "SearchNetTool.h"
+#import "IsLoginTool.h"
+#import "MBProgressHUD.h"
+
+#endif /* PrefixHeader_pch */
